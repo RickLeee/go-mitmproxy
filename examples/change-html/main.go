@@ -29,8 +29,9 @@ func (c *ChangeHtml) Response(f *proxy.Flow) {
 
 func main() {
 	opts := &proxy.Options{
-		Addr:              ":9080",
+		Addr:              ":8080",
 		StreamLargeBodies: 1024 * 1024 * 5,
+		SslInsecure:       true,
 	}
 
 	p, err := proxy.NewProxy(opts)
@@ -38,7 +39,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	p.AddAddon(&ChangeHtml{})
+	//p.AddAddon(&ChangeHtml{})
 
 	log.Fatal(p.Start())
 }

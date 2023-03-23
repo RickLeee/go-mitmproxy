@@ -16,7 +16,7 @@ func loadConfigFromCli() *Config {
 	config := new(Config)
 
 	flag.BoolVar(&config.version, "version", false, "show go-mitmproxy version")
-	flag.StringVar(&config.Addr, "addr", ":9080", "proxy listen addr")
+	flag.StringVar(&config.Addr, "addr", ":8080", "proxy listen addr")
 	flag.StringVar(&config.WebAddr, "web_addr", ":9081", "web interface listen addr")
 	flag.BoolVar(&config.SslInsecure, "ssl_insecure", false, "not verify upstream server SSL/TLS certificates.")
 	flag.Var((*arrayValue)(&config.IgnoreHosts), "ignore_hosts", "a list of ignore hosts")
