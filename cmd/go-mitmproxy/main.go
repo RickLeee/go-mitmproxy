@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/lqqyt2423/go-mitmproxy/addon"
-	"github.com/lqqyt2423/go-mitmproxy/proxy"
-	"github.com/lqqyt2423/go-mitmproxy/web"
+	"github.com/RickLeee/go-mitmproxy/addon"
+	"github.com/RickLeee/go-mitmproxy/proxy"
+	"github.com/RickLeee/go-mitmproxy/web"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -7,7 +7,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/lqqyt2423/go-mitmproxy/proxy"
+	"github.com/RickLeee/go-mitmproxy/proxy"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -4,8 +4,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/RickLeee/go-mitmproxy/proxy"
 	"github.com/gorilla/websocket"
-	"github.com/lqqyt2423/go-mitmproxy/proxy"
 	log "github.com/sirupsen/logrus"
 )
 
