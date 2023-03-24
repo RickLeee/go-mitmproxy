@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/RickLeee/go-mitmproxy/jsonlog"
 	rawLog "log"
 	"os"
 	"strings"
@@ -53,6 +54,7 @@ func main() {
 		StreamLargeBodies: 1024 * 1024 * 5,
 		SslInsecure:       config.SslInsecure,
 		CaRootPath:        config.CertPath,
+		HttpErrorLog:      rawLog.New(jsonlog.New(os.Stdout, jsonlog.LevelOff), "", 0),
 	}
 
 	p, err := proxy.NewProxy(opts)

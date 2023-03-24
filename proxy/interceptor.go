@@ -123,6 +123,7 @@ func newMiddle(proxy *Proxy) (*middle, error) {
 				return ca.GetCert(clientHello.ServerName)
 			},
 		},
+		ErrorLog: proxy.Opts.HttpErrorLog,
 	}
 	m.server = server
 	return m, nil

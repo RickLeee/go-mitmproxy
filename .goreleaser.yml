@@ -2,8 +2,8 @@
 # Make sure to check the documentation at https://goreleaser.com
 before:
   hooks:
-    # You may remove this if you don't use go modules.
-    # - go mod tidy
+#     You may remove this if you don't use go modules.
+     - go mod tidy
     # you may remove this if you don't need go generate
     # - go generate ./...
 builds:
@@ -12,15 +12,15 @@ builds:
     main: ./cmd/go-mitmproxy
     goos:
       - linux
-      - windows
-      - darwin
+#      - windows
+#      - darwin
 archives:
   - replacements:
-      darwin: Darwin
+#      darwin: Darwin
       linux: Linux
-      windows: Windows
-      386: i386
-      amd64: x86_64
+#      windows: Windows
+#      386: i386
+#      amd64: x86_64
 checksum:
   name_template: 'checksums.txt'
 snapshot:
